@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NeuroCalc V1.0 Help</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #f0f0f0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    .accordion {
+      margin-bottom: 15px;
+      border: 1px solid #333;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .accordion input {
+      display: none;
+    }
+
+    .accordion label {
+      display: block;
+      padding: 15px;
+      background-color: #272727;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      background-color: #1c1c1c;
+      transition: max-height 0.4s ease;
+      padding: 0 15px;
+    }
+
+    .accordion input:checked ~ .accordion-content {
+      max-height: 500px;
+      padding: 15px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    code {
+      background: #333;
+      padding: 2px 5px;
+      border-radius: 3px;
+      color: #66ffcc;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧠 NeuroCalc V1.0 - Help Guide</h1>
+
+  <div class="accordion">
+    <input type="checkbox" id="arith">
+    <label for="arith">➕ Arithmetic Functions</label>
+    <div class="accordion-content">
+      <ul>
+        <li><code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>: Basic arithmetic</li>
+        <li>Example: <code>4 + 3 * 2</code> (BODMAS applied)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <input type="checkbox" id="trig">
+    <label for="trig">📐 Trigonometric Functions</label>
+    <div class="accordion-content">
+      <ul>
+        <li><code>sin(xx)</code>, <code>cos(xx)</code>, <code>tan(xx)</code></li>
+        <li><code>sinInv(xx)</code>, <code>cosInv(xx)</code>, <code>tanInv(xx)</code></li>
+        <li><code>sec(xx)</code>, <code>cosec(xx)</code>, <code>cot(xx)</code></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <input type="checkbox" id="log">
+    <label for="log">📊 Logarithmic Functions</label>
+    <div class="accordion-content">
+      <ul>
+        <li><code>logx(xx)</code> → Log base x</li>
+        <li><code>lg(xx)</code> → Log base 10</li>
+        <li><code>ln(xx)</code> → Natural log</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <input type="checkbox" id="exp">
+    <label for="exp">⚡ Exponential Functions</label>
+    <div class="accordion-content">
+      <ul>
+        <li><code>*10^x</code>, <code>*e^x</code></li>
+        <li><code>x^2</code>, <code>x^x</code>, <code>x^-1</code></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <input type="checkbox" id="root">
+    <label for="root">🧮 Root & Factorial Functions</label>
+    <div class="accordion-content">
+      <ul>
+        <li><code>2√(xx)</code> → Square root</li>
+        <li><code>x√(xx)</code> → x-th root</li>
+        <li><i>First add the root you want then click the button.</i></li>
+        <li><code>FACT(xx)</code> → Prime factors</li>
+        <li><code>x!(xx)</code> → Factorial</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <input type="checkbox" id="calc">
+    <label for="calc">∫ Derivatives & Integrals</label>
+    <div class="accordion-content">
+      <ul>
+        <li><code>dy/dx</code> → Derivative</li>
+        <li><code>min(xx)max(xx)∫(xx)</code> → Definite Integral</li>
+        <li><i>You need to press Intergral or Derivative button after closing bracket to get rest of the equation.</i></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <input type="checkbox" id="unit">
+    <label for="unit">🔁 Unit Converter Mode</label>
+    <div class="accordion-content">
+      <ul>
+        <li>Switch Mode → <strong>Unit Converter</strong></li>
+        <li>Select <code>Measurement</code> type</li>
+        <li>Select <code>From</code> and <code>To</code> units</li>
+        <li>Enter value to see converted result</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <input type="checkbox" id="keyboard">
+    <label for="keyboard">⌨️ Keyboard & Input</label>
+    <div class="accordion-content">
+      <ul>
+        <li>Use keys or on-screen buttons</li>
+        <li>Click or press <code>=</code> to evaluate</li>
+        <li>Modes: SHIFT / ALPHA / NORMAL</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
